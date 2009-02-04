@@ -8,8 +8,7 @@
   (average guess (/ x guess)))
 
 (define (good-enough? newguess oldguess x)
-  (and (< (/ oldguess newguess) 1.0000001)
-       (> (/ oldguess newguess) 0.9999999)))
+  (= (/ oldguess newguess) 1.0))
 
 (define (sqrt-iter newguess oldguess x)
   (if (good-enough? newguess oldguess x)
